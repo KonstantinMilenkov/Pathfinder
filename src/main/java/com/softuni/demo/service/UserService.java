@@ -1,9 +1,12 @@
 package com.softuni.demo.service;
 
-import com.softuni.demo.model.entity.User;
+import com.softuni.demo.model.dto.UserLoginBindingModel;
+import com.softuni.demo.model.dto.UserRegisterBindingModel;
 
-import java.util.List;
+public interface UserService {
+    void register(UserRegisterBindingModel userRegisterBindingModel);
 
-public interface UserService{
-    List<User> getAll();
+    boolean login(UserLoginBindingModel userRegisterBindingModel);
+
+    void logout();
 }

@@ -1,5 +1,7 @@
 package com.softuni.demo.model.enums;
 
+import java.util.List;
+
 public enum Level {
-    BEGINNER, INTERMEDIATE, ADVANCED
+    BEGINNER, INTERMEDIATE, ADVANCED;
 }
