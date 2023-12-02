@@ -38,4 +38,8 @@ public class Route extends BaseEntity{
     public Route() {
         this.categories = new HashSet<>();
     }
+
+    public void addCategories(Set<Category> categories) {
+        this.categories.addAll(categories);
+    }
 }
