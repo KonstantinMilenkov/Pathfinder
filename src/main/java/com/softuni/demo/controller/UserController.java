@@ -3,11 +3,13 @@ package com.softuni.demo.controller;
 import com.softuni.demo.model.entity.User;
 import com.softuni.demo.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/users")
 public class UserController {
 
     private UserService userService;
@@ -16,7 +18,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/users/all")
+    @GetMapping("/all")
     public List<User> getAll(){
         return this.userService.getAll();
     }
